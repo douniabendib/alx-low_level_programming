@@ -5,7 +5,7 @@
  * main - Determines the last degital.
  *
  * Return:0 Always (Success)
- */
+**/
 int main(void)
 {
 	int n;

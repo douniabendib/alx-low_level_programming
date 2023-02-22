@@ -26,7 +26,7 @@ for (j = 0; j < 10; j++)
 	{
 		_putchar(',');
 		_putchar(' ');
-		_putchar(' ');
+		_putchar((k / 10) + '0');
 		_putchar((k % 10) + '0');
 	}
 }

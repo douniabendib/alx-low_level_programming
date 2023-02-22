@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * void - ptints all alphabets 10 time.
+ * print_alphabet_x10 - ptints all alphabets 10 time.
+ *
  */
 void print_alphabet_x10(void)
 {
@@ -10,9 +11,8 @@ void print_alphabet_x10(void)
 	for (i = 0; i <= 10; i++)
 	{
 	for (letter = 'a'; letter <= 'z'; letter++)
-	{
 		_putchar(letter);
-	}
+
 		_putchar('\n');
 	}
 }

@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * main - check the code.
+ * main - check the alphabet.
  *
  * Return: Always 0.
  */

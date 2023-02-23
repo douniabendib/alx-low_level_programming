@@ -1,7 +1,6 @@
 #include "main.h"
 /**
- * main - square 
- *
+ * main - square.
  * Return: Always 0.
  */
 int main(void)

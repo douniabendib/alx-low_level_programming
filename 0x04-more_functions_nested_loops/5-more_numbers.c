@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_most_number - print 10 times.
+ * more_numbers - print 10 times.
  * return: void
  */
 void more_numbers(void)

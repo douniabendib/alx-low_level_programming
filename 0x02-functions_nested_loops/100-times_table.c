@@ -9,7 +9,7 @@ int i, j, k;
 if (n >= 0 && n <= 15)
 {
 for (i = 0; i <= n; i++)
-}
+{
 for (j = 0; j <= n; j++)
 {
 k = j * i;
@@ -43,4 +43,6 @@ _putchar((k % 10) + '0');
 }
 }
 _putchar('\n');
+}
+}
 }

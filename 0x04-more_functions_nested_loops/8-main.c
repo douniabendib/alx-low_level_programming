@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - check the code
+ * main - square 
  *
  * Return: Always 0.
  */

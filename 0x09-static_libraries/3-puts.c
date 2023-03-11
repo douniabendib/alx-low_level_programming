@@ -7,7 +7,7 @@
  * main - Entry point
  * Return: Always 0 (Success)
  */
-void _puts(char *str)
+void _puts(char *s)
 {
 puts("\"Programming is like building a multilingual puzzle");
 }

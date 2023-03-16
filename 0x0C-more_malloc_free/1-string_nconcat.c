@@ -25,7 +25,7 @@ while (i < len1)
 {
 s[i] = s1[i];
 i++;
-{
+}
 while (n < len2 && i < (len1 + n))
 s[i++] = s2[j++];
 while (n >= len2 && i < (len1 + len2))

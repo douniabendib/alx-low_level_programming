@@ -1,1 +1,1 @@
-0x0E-structures typedef
+tructures typedef

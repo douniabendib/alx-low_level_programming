@@ -1,16 +1,16 @@
-#ifdef DOG_H
 #define DOG_H
+#ifdef DOG_H
 /**
- * struct dog - dog info
+ * struct dog - Short description about poppy
  * @name: First member
  * @age: Second member
- * @owner: third member
+ * @owner: Third member
  * Description: Longer description
  */
-typedef struct dog
+struct dog
 {
 char *name;
 float age;
 char *owner;
-}my_dog;
+}
 #endif

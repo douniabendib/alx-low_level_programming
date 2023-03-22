@@ -25,7 +25,7 @@ int op_sub(int a, int b)
 	return (a - b);
 }
 /**
- * op_mul - returns of multiplication of two numbers 
+ *op_mul - returns of multiplication of two numbers
  *@a: the first number
  *@b: the second number
  *Return: returns the product of a and b

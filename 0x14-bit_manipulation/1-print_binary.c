@@ -1,19 +1,27 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * print_binary - print binary number
  * @n: number to print
  */
 void print_binary(unsigned long int n)
 {
-	int i;
-	unsigned long int j,k,cur;
+	int i,j;
+	j = 0;
+	unsigned long int k;
 
-	for (i = 7; i >= 0; i--)
+	for (i = 63; i >= 0; i--)
 	{
-		j = i;
-		cur = 1 << j;
-		k = n&cur;
-		k == 0?printf("0"):printf("1");
+		k = n >> i;
+		if (k & 1)
+		{
+			_putchar('1');
+			j++;
+		}
+		else
+		{
+			_putchar('0');
+		}
+		if (j != 0)
+			_putchar('0');
 	}
 }

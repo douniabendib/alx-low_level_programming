@@ -8,14 +8,14 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t fp;
 	char *c;
+	ssize_t fp;
 	ssize_t li;
 	ssize_t ecr;
+
 	fp = open(filename, O_RDONLY);
-	
 	if (fp == -1)
-		return (0);
+		return (1);
 	c = malloc(sizeof(char)* letters);
 	li = read(fp, c, letters);
 	ecr = write(STDOUT_FILENO, c, li);

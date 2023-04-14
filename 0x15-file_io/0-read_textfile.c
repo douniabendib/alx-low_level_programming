@@ -26,6 +26,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		if (fp == -1 || fp == rd || wt == -1 || rd != wt)
 		{
 			printf("Failed to read file");
+			free(buffer);
 			return (0);
 		}
 	free(buffer);

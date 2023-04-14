@@ -57,6 +57,8 @@ int main(int ac, char *av[])
 	rd = read(from, buffer, 1024);
 	to = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0644);
 	wt = write(to, buffer, rd);
+	while (rd > 0)
+	{
 		if (from == -1 || rd == -1)
 		{
 			dprintf(STDERR_FILENO, "Error:Can't read from file %s\n", av[1]);
@@ -69,7 +71,9 @@ int main(int ac, char *av[])
 			free(buffer);
 			exit(99);
 		}
+		rd = read(from, buffer, 1024);
 		to = open(av[2], O_WRONLY | O_APPEND);
+	}
 	free(buffer);
 	close_file(from);
 	close_file(to);

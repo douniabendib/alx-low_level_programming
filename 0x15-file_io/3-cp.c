@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 char *creat_buffer(char *fl);
+void close_file(int fd);
 /**
  * creat_buffer - creat a buffer of 1024
  * @fl : file for storing char
@@ -19,7 +20,6 @@ char *creat_buffer(char *fl)
 	}
 	return (buffer);
 }
-void close_file(int fd);
 /**
  * close_file - function for close file
  * @fd : file decriptor

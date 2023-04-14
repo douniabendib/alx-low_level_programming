@@ -1,14 +1,14 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-char *creat_buffer(char *fl);
+char *create_buffer(char *fl);
 void close_file(int fd);
 /**
- * creat_buffer - creat a buffer of 1024
+ * create_buffer - creat a buffer of 1024
  * @fl : file for storing char
  * Return: return value of buffer
  */
-char *creat_buffer(char *fl)
+char *create_buffer(char *fl)
 {
 	char *buffer;
 
@@ -41,7 +41,7 @@ void close_file(int fd)
  * @argv : is a pointer to array
  * @argc : paramter is a integer represent number of argument
  * Return: 0 always success
- * description: exit code 97- if argc is incorrect
+ * descri: exit code 97- if argc is incorrect
  * exit code 98 - if file_from doesn't exist
  * exit code 99 - if file_to can not creat
  * exit code 100 - if file_to can not close
@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage:cp file_from file_to\n");
 		exit(97);
 	}
-	buffer = creat_buffer(argv[2]);
+	buffer = create_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
 	rd = read(from, buffer, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0644);

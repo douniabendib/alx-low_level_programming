@@ -23,10 +23,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	rd = read(fp, buffer, letters);
 	wt = write(STDOUT_FILENO, buffer, rd);
-		if (fp == -1 || fp == rd || wt == -1 || rd != wt)
+		if (fp == -1 || rd == -1 || wt == -1 || rd != wt)
 		{
 			printf("Failed to read file");
-			free(buffer);
 			return (0);
 		}
 	free(buffer);

@@ -42,7 +42,7 @@ void close_file(int fd)
  * @ac : paramter is a integer represent number of argument
  * Return: 0 always success
  */
-int main(int ac, char *av[])
+int main(int ac, char **av)
 {
 	int rd, wt, to, from;
 	char *buffer;

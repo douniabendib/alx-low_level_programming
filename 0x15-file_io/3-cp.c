@@ -60,7 +60,6 @@ int main(int argc, char *argv[])
 	from = open(argv[1], O_RDONLY);
 	rd = read(from, buffer, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0644);
-	wt = write(to, buffer, rd);
 	do
 	{
 		if (from == -1 || rd == -1)
@@ -69,6 +68,7 @@ int main(int argc, char *argv[])
 			free(buffer);
 			exit(98);
 		}
+		wt = write(to, buffer, rd);
 		if (to == -1 || wt == -1)
 		{
 			dprintf(STDERR_FILENO, "Error:Can't write to %s\n", argv[2]);

@@ -11,8 +11,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buffer;
 	ssize_t rd, wt, fp;
+
 	fp = open(filename, O_RDONLY);
-	buffer = malloc(sizeof(char)* letters);
+	buffer = malloc(sizeof(char) * letters);
 	if (filename == NULL)
 	{
 		printf("Error opening file");
@@ -27,7 +28,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			printf("Failed to read file");
 			return (0);
 		}
-	free (buffer);
+	free(buffer);
 	close(fp);
 	return (wt);
 }

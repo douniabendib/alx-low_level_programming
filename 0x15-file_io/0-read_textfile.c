@@ -19,11 +19,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		printf("Error opening file");
 		return (0);
 	}
-	if (buffer == NULL)
-		return (0);
 	rd = read(fp, buffer, letters);
 	wt = write(STDOUT_FILENO, buffer, rd);
-		if (fp == -1 || rd == -1 || wt == -1 || rd != wt)
+		if (fp == -1 || rd == -1 || wt == -1 || wt != rd)
 		{
 			printf("Failed to read file");
 			return (0);

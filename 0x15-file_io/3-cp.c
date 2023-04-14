@@ -38,24 +38,24 @@ void close_file(int fd)
 }
 /**
  * main - program that copies the content of a file to another file.
- * @av : is a pointer to array
- * @ac : paramter is a integer represent number of argument
+ * @argv : is a pointer to array
+ * @argc : paramter is a integer represent number of argument
  * Return: 0 always success
  */
-int main(int ac, char **av)
+int main(int argc, char *argv[])
 {
 	int rd, wt, to, from;
 	char *buffer;
 
-	if (ac != 3)
+	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage:cp file_from file_to\n");
 		exit(97);
 	}
 	buffer = creat_buffer(av[2]);
-	from = open(av[1], O_RDONLY);
+	from = open(argv[1], O_RDONLY);
 	rd = read(from, buffer, 1024);
-	to = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0644);
+	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0644);
 	wt = write(to, buffer, rd);
 	while (rd > 0)
 	{
@@ -72,7 +72,7 @@ int main(int ac, char **av)
 			exit(99);
 		}
 		rd = read(from, buffer, 1024);
-		to = open(av[2], O_WRONLY | O_APPEND);
+		to = open(argv[2], O_WRONLY | O_APPEND);
 	}
 	free(buffer);
 	close_file(from);

@@ -20,7 +20,6 @@ char *creat_buffer(char *fl)
 	}
 	return (buffer);
 }
-void close_file(int fd);
 /**
  * close_file - function for close file
  * @fd : file decriptor

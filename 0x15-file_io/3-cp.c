@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage:cp file_from file_to\n");
 		exit(97);
 	}
-	buffer = creat_buffer(av[2]);
+	buffer = creat_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
 	rd = read(from, buffer, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0644);
@@ -61,13 +61,13 @@ int main(int argc, char *argv[])
 	{
 		if (from == -1 || rd == -1)
 		{
-			dprintf(STDERR_FILENO, "Error:Can't read from file %s\n", av[1]);
+			dprintf(STDERR_FILENO, "Error:Can't read from file %s\n", argv[1]);
 			free(buffer);
 			exit(98);
 		}
 		if (to == -1 || wt == -1)
 		{
-			dprintf(STDERR_FILENO, "Error:Can't write to %s\n", av[2]);
+			dprintf(STDERR_FILENO, "Error:Can't write to %s\n", argv[2]);
 			free(buffer);
 			exit(99);
 		}

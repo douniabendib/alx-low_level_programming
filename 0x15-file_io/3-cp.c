@@ -1,21 +1,21 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-char *create_buffer(char *fl);
+char *creat_buffer(char *fl);
 void close_file(int fd);
 /**
- * create_buffer - creat a buffer of 1024
+ * creat_buffer - creat a buffer of 1024
  * @fl : file for storing char
  * Return: return value of buffer
  */
-char *create_buffer(char *fl)
+char *creat_buffer(char *fl)
 {
 	char *buffer;
 
 	buffer = malloc(sizeof(char) * 1024);
 	if (buffer == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error:Can't write to %s\n", fl);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", fl);
 		exit(99);
 	}
 	return (buffer);
@@ -32,7 +32,7 @@ void close_file(int fd)
 	f = close(fd);
 	if (f == -1)
 	{
-		dprintf(STDERR_FILENO, "Error:Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	buffer = create_buffer(argv[2]);
+	buffer = creat_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
 	rd = read(from, buffer, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0644);

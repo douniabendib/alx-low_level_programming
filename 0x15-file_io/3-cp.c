@@ -1,8 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-char *creat_buffer(char *fl);
-void close_file(int fd);
 /**
  * creat_buffer - creat a buffer of 1024
  * @fl : file for storing char
@@ -30,6 +28,7 @@ void close_file(int fd)
 	int f;
 
 	f = close(fd);
+
 	if (f == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
@@ -41,10 +40,6 @@ void close_file(int fd)
  * @argv : is a pointer to array
  * @argc : paramter is a integer represent number of argument
  * Return: 0 always success
- * descri: exit code 97- if argc is incorrect
- * exit code 98 - if file_from doesn't exist
- * exit code 99 - if file_to can not creat
- * exit code 100 - if file_to can not close
  */
 int main(int argc, char *argv[])
 {

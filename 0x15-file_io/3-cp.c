@@ -75,5 +75,6 @@ int main(int argc, char *argv[])
 	free(buffer);
 	close_file(from);
 	close_file(to);
+
 	return (0);
 }

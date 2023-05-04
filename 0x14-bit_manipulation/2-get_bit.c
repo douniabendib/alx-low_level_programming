@@ -3,7 +3,7 @@
  * get_bit - function of a bit at an index in a decimal num
  * @n: number to search
  * @index: the bit value
- * return: bit value
+ * Return: bit value
  */
 int get_bit(unsigned long int n, unsigned int index)
 {

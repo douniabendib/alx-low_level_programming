@@ -7,17 +7,19 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+	ssize_t fp;
+	char *buffer;
 	ssize_t n;
-	char *buffer = malloc(sizeof(char) * letters);
-	FILE *fp = fopen(filename, "r");
 
-	if (fp == NULL)
+	fp = open(filename, O_RDONLY);
+	if (fp == -1)
 	{
 		return (0);
 	}
-	n = read(fileno(fp), buffer, letters);
+	buffer = malloc(sizeof(char) * letters);
+	n = read(fp, buffer, letters);
 	printf("%s", buffer);
-	fclose(fp);
+	close(fp);
 	free(buffer);
 	return (n);
 }

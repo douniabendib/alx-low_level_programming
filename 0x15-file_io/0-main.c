@@ -4,7 +4,8 @@
 
 /**
  * main - check the code
- *
+ * @av : array pointer
+ * @ac : integer
  * Return: Always 0.
  */
 int main(int ac, char **av)

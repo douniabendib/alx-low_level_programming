@@ -40,9 +40,9 @@ void close_file(int fl)
  * @av: An array of pointers to the arguments.
  * Return: 0 on success.
  * Description:Exit 97- If the argument count is incorrect
- *             Exit 98- If file_from does not exist or cannot be read
- *             Exit 99- If file_to cannot be created or written
- *             Exit 100- If file_to or file_from cannot be closed
+ * Exit 98- If file_from does not exist or cannot be read
+ * Exit 99- If file_to cannot be created or written
+ * Exit 100- If file_to or file_from cannot be closed
  */
 int main(int ac, char *av[])
 {

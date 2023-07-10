@@ -84,4 +84,3 @@ int main(int ac, char *av[])
 	close_file(fto);
 	return (0);
 }
-

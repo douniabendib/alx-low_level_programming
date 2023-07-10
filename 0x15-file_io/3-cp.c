@@ -64,15 +64,15 @@ int main(int ac, char *av[])
 		if (ffrom == -1 || n == -1)
 		{
 			dprintf(STDERR_FILENO,
-					"Error: Can't read from file NAME_OF_THE_FILE %s\n", av[1]);
+					"Error: Can't read from file %s\n", av[1]);
 			free(buffer);
 			exit(98);
-		
+		}
 		m = write(fto, buffer, n);
 		if (fto == -1 || m == -1)
 		{
 			dprintf(STDERR_FILENO,
-					"Error: Can't write to NAME_OF_THE_FILE %s\n", av[2]);
+					"Error: Can't write to %s\n", av[2]);
 			free(buffer);
 			exit(99);
 		}

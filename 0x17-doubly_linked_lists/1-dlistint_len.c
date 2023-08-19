@@ -1,10 +1,10 @@
 #include "lists.h"
 /**
- * print_dlistint - prints all the elements of double list
- * @h: head of dll
- * Return: num of nodes
+ * dlistint_len - return the num of element of dll
+ * @h: head of double linked list
+ * Return: the num of linked list
  */
-size_t print_dlistint(const dlistint_t *h)
+size_t dlistint_len(const dlistint_t *h)
 {
 	int c;
 
@@ -15,7 +15,6 @@ size_t print_dlistint(const dlistint_t *h)
 		h = h->prev;
 	while (h != NULL)
 	{
-		printf("%d\n", h->n);
 		c++;
 		h = h->next;
 	}

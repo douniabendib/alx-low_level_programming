@@ -6,21 +6,21 @@
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-	int count;
+	int c;
 
-	count = 0;
+	c = 0;
 
 	if (h == NULL)
-		return (count);
+		return (c);
 
 	while (h->prev != NULL)
 		h = h->prev;
 
 	while (h != NULL)
 	{
-		count++;
+		c++;
 		h = h->next;
 	}
 
-	return (count);
+	return (c);
 }
